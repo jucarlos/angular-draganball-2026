@@ -1,59 +1,38 @@
-# DragonBall
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.15.
 
-## Development server
+## Aplicación con nuevas características de angular
 
-To start a local development server, run:
+Crearla
 
-```bash
-ng serve
+```
+ng new dragon-ball
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Diferencias con aplicación "clasica"
+Una de ellas es que no hay módulos.
+Los componentes ts son standalone ( módulos en si mismos +- )
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+ • Señales , update callback functions.
+ • Estado
+ • Propiedades
+ • Rutas
+ • Métodos
+ • Componentes reutilizables
+ • Eventos
+ • Cambios en el DOM
+ • Cada archivo y directorio de un proyecto
+ • RouterLink
+ • RouterLink Active
+ • Nuevo control flow
+ • @for
+ • @if
+ • ngClass - Alternativas
+ • Comunicación entre componentes
+ • Inputs / outputs (Como señales) @Input, input()
+ • Servicios en Angular
+ • Efectos y LocalStorage
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+ • HashRouter   nuestrohost/#/pagina1
+ • Despliegues
