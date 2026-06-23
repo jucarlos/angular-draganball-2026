@@ -1,16 +1,18 @@
 import { ChangeDetectionStrategy, Component, signal, ɵɵattachSourceLocations } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 import { NgClass } from '@angular/common';
+import { AddCharacter } from "../../components/add-character/add-character";
+import { CharactersList } from "../../components/characters-list/characters-list";
 
 
 @Component({
-  selector: 'app-dragon-ball',
-  imports: [NgClass],
-  templateUrl: './dragon-ball.html',
-  styleUrl: './dragon-ball.css',
+  selector: 'app-dragon-ball-super',
+  imports: [NgClass, AddCharacter, CharactersList],
+  templateUrl: './dragon-ball-super.html',
+  styleUrl: './dragon-ball-super.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DragonBall {
+export class DragonBallSuper {
 
 
   name = signal<string>('');
