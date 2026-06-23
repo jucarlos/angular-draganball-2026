@@ -1,1 +1,20 @@
-<p>heroes works!</p>,
+
+
+
+<h2>{{ name() }}</h2>
+
+<dl>
+
+  <td>Datos del héroe</td>
+  <dd>{{ getHeroeDescription() }}</dd>
+
+</dl>
+
+<h3>Nombre en mayúsculas</h3>
+<h2>{{ name().toUpperCase() }} </h2>
+
+<h3>Nombre en mayúsculas señal computada</h3>
+<h2>{{ capitalizedName() }} </h2>
+
+
+<button class="btn btn-primary" (click)="changeHeroe()">Cambiar Héroe</button>

@@ -1,1 +1,11 @@
-<p>counter works!</p>,
+
+
+<h3>Counter: {{ counter }}</h3>
+<h3>Counter Signal: {{ counterSignal() }}</h3>
+
+<hr/>
+
+
+<button class="btn btn-success mx-2" (click)="incrementar(1)">+1</button>
+<button class="btn btn-success mx-2" (click)="incrementar(-1)">-1</button>
+<button class="btn btn-success" (click)="reset()">Reset</button>
