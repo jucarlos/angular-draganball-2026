@@ -23,6 +23,7 @@ export class Heroes {
   changeHeroe() {
     this.name.set('Spiderman');
     this.age.set( 25 );
+
   }
 
   changeAge() {

@@ -12,8 +12,6 @@ Diferencias con aplicación "clasica"
 Una de ellas es que no hay módulos.
 Los componentes ts son standalone ( módulos en si mismos +- )
 
-VOLVEMOS 11:40
-
 
 
 
@@ -39,4 +37,8 @@ VOLVEMOS 11:40
 
 
  • HashRouter   nuestrohost/#/pagina1  
- • Despliegues  
+ • Despliegues https://www.netlify.com/
+ 
+  
+
+

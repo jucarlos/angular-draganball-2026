@@ -1,23 +1,17 @@
-import { ChangeDetectionStrategy, Component, signal, ɵɵattachSourceLocations } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
-import { NgClass } from '@angular/common';
 import { AddCharacter } from "../../components/add-character/add-character";
 import { CharactersList } from "../../components/characters-list/characters-list";
 
 
 @Component({
   selector: 'app-dragon-ball-super',
-  imports: [NgClass, AddCharacter, CharactersList],
+  imports: [AddCharacter, CharactersList],
   templateUrl: './dragon-ball-super.html',
   styleUrl: './dragon-ball-super.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DragonBallSuper {
-
-
-  name = signal<string>('');
-  power = signal<number>(0);
-
 
 
 
@@ -46,39 +40,6 @@ export class DragonBallSuper {
 
 
   ])
-
-  addCharacter() {
-
-    if ( !this.name() || !this.power() || this.power() <= 0 ) {
-      console.log('Faltan datos');
-      return;
-    }
-
-    const newCharacter: Character = {
-
-      id: this.characters().length + 1,
-      name: this.name(),
-      power: this.power(),
-    };
-
-    this.characters.update( ( data ) => {
-
-        return [...data, newCharacter];
-    });
-
-
-    console.log( this.characters() );
-
-    this.resetFields();
-
-
-
-  }
-
-  resetFields() {
-    this.name.set('');
-    this.power.set(0);
-  }
 
 
 
