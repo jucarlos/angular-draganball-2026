@@ -1,1 +1,30 @@
-<p>characters-list works!</p>,
+
+
+ <h3>{{ titleList() }}</h3>
+    <hr>
+
+    <ul>
+        @for (character of characters(); track character.id;
+         let idx = $index ) {
+
+          @if ( character.power != 4000 ) {
+
+           <li>
+            <span>{{ idx + 1 }} - {{ character.name }}</span>
+            <strong
+
+              [ngClass]="
+                {
+                  'text-danger': character.power < 5100,
+                  'text-primary': character.power >= 5101
+                }
+              "
+
+              > ( {{ character.power }} ) </strong>
+          </li>
+
+          }
+        }
+
+
+    </ul>

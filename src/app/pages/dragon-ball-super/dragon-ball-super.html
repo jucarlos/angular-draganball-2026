@@ -15,7 +15,7 @@ Formulario reactivos tienen poca lógica en el Html ( queda limpio) y la lógica
 <section class="row">
   <div class="col-12 col-sm-6">
 
-   <add-character></add-character>
+   <add-character (emitNewCharacter)="dragonService.addCharacter($event)" ></add-character>
 
   </div>
 
@@ -24,7 +24,13 @@ Formulario reactivos tienen poca lógica en el Html ( queda limpio) y la lógica
 
   <div class="col-12 col-sm-6">
 
-    <characters-list></characters-list>
+    <characters-list
+
+        titleList="Listado de Dragon Ball"
+        [characters]="dragonService.characters()">
+
+    </characters-list>
+
 
   </div>
 

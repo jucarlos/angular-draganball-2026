@@ -1,1 +1,30 @@
-<p>add-character works!</p>,
+<h3>Agregar: {{ name() }} </h3>
+    <hr>
+
+    <input
+      class="form-control"
+      placeholder="Nombre"
+      type="text"
+      [value]="name()"
+      (change)="name.set(txtName.value)"
+      (input)="name.set(txtName.value)"
+
+      #txtName
+
+    />
+
+    <input
+      class="form-control mt-2"
+      placeholder="Poder"
+      type="number"
+      [value]="power()"
+      (change)="power.set(+txtPower.value)"
+      (input)="power.set(+txtPower.value)"
+
+      #txtPower
+    />
+
+
+    <button
+      (click)="addCharacter()"
+      class="mt-2 btn btn-primary">Agregar</button>

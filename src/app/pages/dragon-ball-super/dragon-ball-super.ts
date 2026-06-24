@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 import { AddCharacter } from "../../components/add-character/add-character";
 import { CharactersList } from "../../components/characters-list/characters-list";
+import { DragonballService } from '../../services/dragonball-service';
+
 
 
 @Component({
@@ -13,33 +15,21 @@ import { CharactersList } from "../../components/characters-list/characters-list
 })
 export class DragonBallSuper {
 
+  // inyectar el servicio.
+
+  // clasica inyeccion de d.
+  // constructor(public dragonService: DragonballService) {}
+
+  // Se recomienda así:
+  dragonService = inject( DragonballService );
 
 
-  characters = signal<Character[]>([
-
-    {
-      id: 1,
-      name: 'Goku',
-      power: 5000
-    },
-    {
-      id: 2,
-      name: 'Vegetta',
-      power: 4000
-    },
-    {
-      id: 3,
-      name: 'Piccolo',
-      power: 6000
-    },
-    {
-      id: 4,
-      name: 'Cell',
-      power: 7000
-    }
+  // recibir los datos y mandarlos al servicio
+  dataChild() {
+    console.log('Vienen datos')
+  }
 
 
-  ])
 
 
 
