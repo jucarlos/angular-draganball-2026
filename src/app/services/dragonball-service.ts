@@ -10,23 +10,43 @@ export class DragonballService  {
 
 
 
+    characters = signal<Character[]>(this.loadFromLocalStorage());
 
 
-   characters = signal<Character[]>([
+    loadFromLocalStorage() {
+      const characters = localStorage.getItem('characters');
 
-    {
-      id: 1,
-      name: 'Goku',
-      power: 6900
-    },
-    {
-      id: 2,
-      name: 'Vegetta',
-      power: 4500
+      return characters ? JSON.parse( characters ) : [];
     }
 
 
-  ]);
+
+  addCharacter(character: Character ){
+
+    // console.log( character );
+    this.characters.update( ( listado ) => [...listado, character]);
+    localStorage.setItem('characters', JSON.stringify ( this.characters() ) );
+
+  }
+
+
+
+
+  //  characters = signal<Character[]>([
+
+  //   {
+  //     id: 1,
+  //     name: 'Goku',
+  //     power: 6900
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Vegetta',
+  //     power: 4500
+  //   }
+
+
+  // ]);
 
 
 
@@ -38,11 +58,6 @@ export class DragonballService  {
 
   // guardar en sitio externo bd, localstorage
 
-  addCharacter(character: Character ){
-
-    // console.log( character );
-    this.characters.update( ( listado ) => [...listado, character]);
-  }
 
 
 }

@@ -15,7 +15,11 @@ Formulario reactivos tienen poca lógica en el Html ( queda limpio) y la lógica
 <section class="row">
   <div class="col-12 col-sm-6">
 
-   <add-character (emitNewCharacter)="dragonService.addCharacter($event)" ></add-character>
+   <add-character
+   (emitNewCharacter)="dragonService.addCharacter($event)"
+   (emitLengthName)="pintarLon($event)"
+   >
+   </add-character>
 
   </div>
 

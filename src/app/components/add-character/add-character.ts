@@ -14,6 +14,7 @@ export class AddCharacter {
   power = signal(0);
 
   emitNewCharacter = output<Character>();
+  emitLengthName = output<number>();
 
 
 
@@ -34,10 +35,10 @@ export class AddCharacter {
     console.log( newCharacter );
 
     this.emitNewCharacter.emit(newCharacter);
+    this.emitLengthName.emit(this.name().length);
 
 
-    this.resetFields();
-
+    this.resetFields( );
 
   }
 

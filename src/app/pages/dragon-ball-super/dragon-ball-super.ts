@@ -25,10 +25,10 @@ export class DragonBallSuper {
 
 
   // recibir los datos y mandarlos al servicio
-  dataChild() {
-    console.log('Vienen datos')
-  }
 
+pintarLon( data: number ) {
+  console.log( data )
+}
 
 
 
